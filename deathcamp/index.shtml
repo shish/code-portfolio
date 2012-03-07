@@ -1,0 +1,34 @@
+<!--#set var="title" value="Escape from Deathcamp Gugenschluben" -->
+<!--#set var="extra-css" value="" -->
+<!--#include file="/assets/header.shtml" -->
+<!--#include file="/assets/navbar.html" -->
+
+<div class="container">
+	<div class="page-header">
+		<h1>Escape from Deathcamp Gugenschluben</h1>
+	</div>
+	<div class="row">
+		<div class="span4">
+			<p>A game created for GCSE religious studies, to demonstrate the hopelessness
+			of deathcamp life</p>
+			<!--	<li><a href="http://svn.shishnet.org/deathcamp/">Source code</a> -->
+			<p><a href="../">&laquo; Back to Shish's Code</a></p>
+		</div>
+		<div class="span8">
+			<center class="thumbnail">
+				<applet code="CampLoader" archive="camp.jar" width="600" height="400">
+					<param name="dataFile" value="deathcamp.dat">
+					<param name="wall" value="wall.jpg">
+					<param name="floor" value="floor.jpg">
+					<param name="roof" value="ceiling.jpg">
+					<param name="block" value="wall.jpg">
+					<param name="vidde" value="default.jpg">
+					<param name="infocount" value="2">
+					<param name="interactive" value="false">
+					<param name="usejar" value="true">
+					<param name="loads" value="95">
+				</applet>
+			</center>
+		</div>
+	</div>
+<!--#include file="/assets/footer.html" -->

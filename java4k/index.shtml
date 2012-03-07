@@ -1,0 +1,23 @@
+<!--#set var="title" value="Java 4k Games" -->
+<!--#set var="extra-css" value="" -->
+<!--#include file="/assets/header.shtml" -->
+<!--#include file="/assets/navbar.html" -->
+
+<div class="container">
+	<div class="page-header">
+		<h1>Whack-a-Square</h1>
+	</div>
+	<div class="row">
+		<div class="span4">
+			<p>A whack-a-sqare game in a couple of KB of code; it doesn't use any fancy bytecode tricks, it's just a simple game :P</p>
+			<p>Click the game to give it focus</p>
+			<p>Use the number pad, numlock must be OFF</p>
+			<p>Every (300 - (hits*3) - (misses*10)) ms the blocks get a 1/20 chance of changing, miss 10 and the game starts over</p>
+			<!-- <li><a href="http://svn.shishnet.org/java4k/">Source code</a> -->
+			<p><a href="../">&laquo; Back to Shish's Code</a></p>
+		</div>
+		<div class="span8">
+			<center><applet code="whack" archive="whack.jar" width="150" height="200"></applet></center>
+		</div>
+	</div>
+<!--#include file="/assets/footer.html" -->
