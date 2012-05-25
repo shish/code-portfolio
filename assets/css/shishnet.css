@@ -1,0 +1,60 @@
+BODY {
+	padding-top: 40px;
+	padding-bottom: 20px;
+	text-align: justify;
+}
+H1, H2, H3, H4 {
+	text-align: left;
+}
+SECTION {
+	padding-top: 60px;
+}
+
+.thumbnail {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	background: white;
+}
+
+.splash .hero-unit {
+	background: rgba(245, 245, 245, 0.95);
+	margin-left: -30px;
+	margin-right: -30px;
+	padding-left: 90px;
+	box-shadow: #444 0px 0px 20px;
+}
+.splash SECTION {
+	border-radius: 6px;
+	background: rgba(255, 255, 255, 0.95);
+	margin-left: -30px;
+	margin-right: -30px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	box-shadow: #444 0px 0px 20px;
+}
+.splash .page-header {
+	margin-top: 0px;
+}
+.splash HR, .splash FOOTER {
+	display: none;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+	.bottom-margin {
+		margin-bottom: 20px;
+	}
+}
+@media (min-width: 980px) and (max-width: 1199px) {
+	.bottom-margin {
+		margin-bottom: 20px;
+	}
+}
+@media (min-width: 1200px) {
+	.bottom-margin {
+		margin-bottom: 30px;
+	}
+}

@@ -1,0 +1,57 @@
+#!/usr/bin/python
+
+import sys
+import os
+import re
+from glob import glob
+
+def main(argv):
+    pattern = re.compile("([^'\"]+)-(\d+x\d+|screen|full).(jpg|png)")
+    for filename in argv[1:]:
+        base = os.path.dirname(filename)
+        data = file(filename).read()
+        for name, size, ext in pattern.findall(data):
+
+            output = os.path.join(base, name + "-" + size + "." + ext)
+            sources = glob(os.path.join(base, name) + ".*")
+            if len(sources) == 0:
+                print "Can't find source for " + output
+                continue
+            if len(sources) >= 2:
+                print "Too many sources for " + output
+                continue
+            source = sources[0]
+
+            if "x" in size:
+                width, height = [int(x) for x in size.split("x")]
+            else:
+                width, height = 0, 0
+
+            if source.endswith(".jpg") or source.endswith(".png"):
+                if size == "full":
+                    cmd = "convert %(input)s %(output)s"
+                elif size == "screen":
+                    cmd = "convert %(input)s -geometry 800x800 %(output)s"
+                else:
+                    cmd = "convert %(input)s -geometry %(width)dx9000 -extent %(width)dx%(height)d %(output)s"
+            else:
+                if size == "full":
+                    cmd = "xcf2png %(input)s -o - | convert - %(output)s"
+                elif size == "screen":
+                    cmd = "xcf2png %(input)s -o - | convert - -geometry 800x800 %(output)s"
+                else:
+                    cmd = "xcf2png %(input)s -o - | convert - -geometry %(width)dx9000 -extent %(width)dx%(height)d %(output)s"
+
+            args = {
+                "input": source,
+                "width": width,
+                "height": height,
+                "output": output
+            }
+            print(cmd % args)
+            os.system(cmd % args)
+
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv))
