@@ -76,13 +76,13 @@ BODY {
 			</div>
 			<div class="span4">
 				<h2>Context</h2>
-				<a class="thumbnail" href="http://www.boomtools.co.uk/context"><img src="thumbs/context-360x150.jpg"></a>
-				<p>A profiling tool that shows how long each section of code takes, <em>and what context that code is running in</em>, something that every other profiler seems to ignore. A commercial Civicboom side-project.</p>
+				<a class="thumbnail" href="/context"><img src="thumbs/context-360x150.jpg"></a>
+				<p>A profiling tool that shows how long each section of code takes, <em>and what context that code is running in</em>, something that every other profiler seems to ignore.</p>
 			</div>
 			<div class="span4">
 				<h2>Monkey Swarm</h2>
-				<a class="thumbnail" href="http://www.boomtools.co.uk/monkeys"><img src="thumbs/monkeys-360x150.jpg"></a>
-				<p>A tool to simulate having many users <em>interacting</em> with a website at once, not just hitting the front page. A commercial Civicboom side-project.</p>
+				<a class="thumbnail" href="/monkeys"><img src="thumbs/monkeys-360x150.jpg"></a>
+				<p>A tool to simulate having many users <em>interacting</em> with a website at once, not just hitting the front page.</p>
 			</div>
 		</div>
 	</section>
@@ -101,7 +101,7 @@ BODY {
 			<div class="span6">
 				<h2>Lemonade</h2>
 				<a class="thumbnail" href="https://github.com/shish/lemonade"><img src="thumbs/lemonade-560x150.png"></a>
-				<p>A rather fruity Ascii Demo Engine. For GCSE computing we were told to make a presentation about floating point binary - Seeing as I dislike Powerpoint, I decided to make a flipbook style animation in Notepad. Then, since 'press the PgDn key' is a sucky form of animation, I wrote an animation engine and compressed the whole lot to 1867 bytes.</p>
+				<p>A rather fruity Ascii Demo Engine. For GCSE computing we were told to make a presentation about floating point binary - Seeing as I dislike Powerpoint, I decided to make a flipbook style animation in Notepad. Then, since 'press the PgDn key' is a sucky form of animation, I wrote an animation engine and compressed the whole lot to 1867 bytes. <a href="http://www.youtube.com/watch?v=Lw9nuWL0vAU">See the results</a></p>
 			</div>
 		</div>
 		<div class="row">
@@ -117,8 +117,8 @@ BODY {
 			</div>
 			<div class="span4">
 				<h2>CarMuse</h2>
-				<a class="thumbnail" href="http://youtube.com/watch?v=Zu3VI84RD04"><img src="thumbs/carmuse-360x150.jpg"></a>
-				<p>The Boom Rangers' entry into Honda's "Power of Dreams" hack weekend. Takes events from a synthesized engine management system (speed, gear change, etc) and generates appropriate "music". Won the "Best Technology" award.</p>
+				<a class="thumbnail" href="http://hacks.rewiredstate.org/events/power-of-minds/car-muse"><img src="thumbs/carmuse-360x150.jpg"></a>
+				<p>The Boom Rangers' entry into Honda's "Power of Dreams" hack weekend. Takes events from a synthesized engine management system (speed, gear change, etc) and generates appropriate "music". Won the "Best Technology" award. <a href="http://www.youtube.com/watch?v=wT5YEm9PAMs">Video</a></p>
 			</div>
 		</div>
 	</section>
