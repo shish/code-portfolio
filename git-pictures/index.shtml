@@ -3,7 +3,9 @@
 IMG {
 	border: 1px solid #444;
 }
-H3 SPAN {
+H2 SPAN,
+H3 SPAN,
+H4 SPAN {
 	color: #AAA;
 }
 " -->
@@ -18,6 +20,16 @@ H3 SPAN {
 		<div class="span12">
 
 <h2>Yet Another Git Tutorial</h2>
+
+<p>Explaining what happens behind the scenes, because it's all remarkably sensible; it's just totally different to what most people are used to:
+
+<ul>
+<li><a href="#begin">Basics</a>
+<li><a href="#amend">Basic History Tweaking: Amending Commits</a>
+<li><a href="#pick-rebase">Advanced History Tweaking: Cherry-Pick and Rebase</a>
+<li><a href="#network">Centralised Networking</a>
+<li><a href="#distributed">Distributed Networking</a>
+</ul>
 
 <section id="begin">
 	<h2>The Basics</h2>
@@ -89,6 +101,24 @@ H3 SPAN {
 	<img src="14_commit.svg">
 </section>
 
+<section id="amend">
+	<h2>Amend</h2>
+	<p>Sometimes everything seems fine until just after hitting the "Commit" button. Thankfully, git allows tweaking local history and nobody has to know (rewriting public history is likely to cause problems, but there are safeguards against that).
+
+	<p>Let's say you have a simple repository:
+	<p><img src="amend/01_initial_state.svg">
+	<p>And then make a commit:
+	
+	<h3>Commit <span>git commit -a -m "did some wrok"</span></h3>
+	<p><img src="amend/02_commit_1.svg">
+	<p>But oh no, a typo! We don't want people to see that, so we can make a new commit, which will basically be the same as the old commit, but slightly tweaked. In this case we're only tweaking the commit message, but it's also possible to change files and amend those too.
+
+	<h3>Commit (Amend) <span>git commit --amend -a -m "did some work"</span></h3>
+	<p><img src="amend/03_commit_2.svg">
+	<p>Note that the original commit still exists, there just aren't any references to it; it'll hang around for a couple of weeks until it gets garbage collected (so for example if the amend wasn't intentional, you can go back to the original version of the commit and work on top of that instead)
+	
+</section>
+
 <section id="pick-rebase">
 	<h2>Cherry-pick / rebase</h2>
 	<p>Because you don't always want to merge an entire branch -- sometimes there are individual commits that fix things, but the rest of the branch is working on a large feature that isn't ready yet
@@ -104,7 +134,7 @@ H3 SPAN {
 
 	<h3>Cherry-Pick <span>git cherry-pick 038cab34</span></h3>
 	<img src="22_cherrypick.svg">
-	<p>That went well, let's have the small one as well:
+	<p>That went well. Note that the new commit has a different commit ID - despite the change itself being the same, it is based on different history. Let's have the small one as well:
 
 	<h3>Cherry-Pick <span>git cherry-pick 32760934</span></h3>
 	<img src="23_cherrypick.svg">
@@ -121,21 +151,52 @@ H3 SPAN {
 </section>
 
 <section id="network">
-	<h2>Distributed Version Control</h2>
-	<p>Most of the time, you'll want to be working with a remote repository
+	<h2>Networked version control</h2>
+	<p>Remember how a commit ID is the hash of the whole project history up to that point? This makes it easy for multiple people to compare histories, because no matter where or when you are, the same ID will always refer to the same data. If your "master" is pointing to "abc123", and origin's "master" is pointing to "def456, which has a parent of abc123", then you know that someone else has made one commit that you haven't seen.
+	<p>Most of the time, you'll want to be working with a remote repository, like this one:
+	<p><img src="30_origin.svg">
 
 	<h3>Clone <span>git clone git://github.com/user/repo.git</span></h3>
-	<p>Clone makes a copy of a remote repository, then renames the fetched references to <code>origin/$name</code>
+	<img src="31_clone.svg">
+	<p>Clone makes a copy of a remote repository, then renames the fetched references to <code>origin/$name</code>.
+	It also gives you your own <code>master</code> branch to work on.
 	<p>Let's assume that somebody has added some new commits to origin:
+	<p><img src="32_remote_work.svg">
 	
 	<p>So, how do we see them?
 
-	<h3>Fetch</h3>
-	<p>Remember how a commit ID is the hash of the whole project history up to that point? This makes it easy for multiple people to compare histories, because no matter where or when you are, the same ID will always refer to the same data.
-	<p>When you pull, git will <code>fetch</code> the remote references, and then fetch any commits (along with their histories) that those references point to.
+	<h3>Pull <span>git pull</span></h3>
+	<p>Pull does two things -- first it downloads the remote commits and remote references (<code>git fetch</code>), then it makes sure that the remote changes are merged with your local changes (<code>git merge</code>). Let's look at these individually:
 
-	<h3>Merge</h3>
+	<h4>Fetch <span>git fetch origin</span></h4>
+	<p><img src="33_fetch.svg">
+	<p>See how the tree of history has been updated so that the commits all match up, and the remote branches "feature" and "master" match "origin/feature" and "origin/master" locally. Our currently active code (the "master" that HEAD points to) is still lagging behind though; so on to pull part 2:
 
+	<h4>Merge <span>git merge origin/master</span></h4>
+	<p>Since the local copy of master hasn't had any changes, then this so-called "merge" simply consists of fast-forwarding our local "master" to catch up with "origin/master"
+	<p><img src="34_merge.svg">
+</section>
+
+<section id="distributed">
+	<h2>Distributed version control</h2>
+	<p>The above pattern, with developers speaking to a central "origin" repository is generally the most common approach for small, tight-knit groups. But for large projects with teams all over the world, you don't need to be limited to a single origin server. Let's say that starting with the basic repository, two separate teams decided to work on different features. One team in France added a waffle, and another team in Germany added a kitten:
+	<p><img src="distributed/01_initial_state.svg">
+	<p>But here in England, our project spec demands a waffle <b>and</b> a kitten!
+	<p>First things first, let's let git know that those other teams exist (this only needs doing once):
+	<p><code>git remote add france ssh://dev.mycompany.fr/le-repos/project1.git</code>
+	<p><code>git remote add germany ssh://dev.mycompany.de/das-repos/project1.git</code>
+	<p>Then we fetch the work of the French team:
+
+	<h4>Fetch <span>git fetch france</span></h4>
+	<p><img src="distributed/02_fetch_france.svg">
+	<p>And the German team:
+
+	<h4>Fetch <span>git fetch germany</span></h4>
+	<p><img src="distributed/03_fetch_germany.svg">
+	<p>Now that we've collected all the different commits in one place, we can merge both branches into our own master:
+
+	<h4>Merge <span>git merge france/master germany/master</span></h4>
+	<p><img src="distributed/04_merge.svg">
 </section>
 
 		</div>
