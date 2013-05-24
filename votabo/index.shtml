@@ -1,0 +1,27 @@
+<!--#set var="title" value="Votabo" -->
+<!--#set var="extra-css" value="" -->
+<!--#include file="/assets/header.shtml" -->
+<!--#include file="/assets/navbar.html" -->
+
+<div class="container">
+	<div class="page-header">
+		<h1>Votabo</h1>
+	</div>
+	<div class="row">
+		<div class="span4">
+
+<p>~ The Vodka Tagboard ~</p>
+<p>(I'd already named my first board after myself, so I figured I'd name the successor after my best friend &lt;3)</p>
+<p>It's basically Shimmie, just without being based on PHP and MySQL</p>
+
+<p>&nbsp;
+
+			<p><a href="../">&laquo; Back to Shish's Code</a>
+		</div>
+        <div class="span8">
+
+
+		</div>
+	</div>
+
+<!--#include file="/assets/footer.html" -->
