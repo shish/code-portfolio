@@ -1,0 +1,48 @@
+We have a theory that the profile page is slow; it runs ~14 moderately heavy database queries on every page load and there is no caching at all.
+
+## Step 1: Confirm our suspicion that the page really is slow
+
+```text
+# cycles/index
+10 profile
+```
+
+```python
+# cycles/profile.py
+from common import CivicboomBaseCycle
+
+class main(CivicboomBaseCycle):
+    def test(self):
+        # log in once, test the profile several times. 1/1 would
+        # work too, but then we'd spend half our profiling time
+        # profiling the login process
+        self.log_in()
+        self.app.get("/profile")
+        self.app.get("/profile")
+```
+
+with this simple bank of cycles in place, we can run them (well, it) a few times. Each cycle loads /profile twice, the "profile" cycle is run 10 times per bank, and the bank is run 4 times (one warmup, "-w", and three measured repeats, "-r 3") - so a total of 60 recorded page loads, spread over 3 concurrent clients ("-c 3"):
+
+```text
+$ ./cb-bench -w -b https://ran.civicboom.com/ -c 3 -r 3
+2011-07-21 15:53:34,451 24231 INFO     root                 Finding cycles
+2011-07-21 15:53:34,452 24231 INFO     root                 Running warmup
+...
+2011-07-21 15:53:37,891 24231 INFO     root                 Running cycles
+...
+2011-07-21 15:54:43,977 24231 INFO     root                 Cycles over
+
+num    min    max    ave    h/s    url
+   60  1.905  6.330  5.562   0.54   GET /profile
+   30  0.041  0.295  0.140  21.42  POST /account/signin.json
+   90  0.041  6.330  2.851  10.98
+```
+
+So we see that signing in takes an average of 0.14 seconds, but then loading the user's profile takes 5.5 -- if we define "acceptable" as "under one second", then it is clear that users have a problem as soon as they log in. (Our live server is about 4x as fast as my testing laptop, but even then, 1.5s is still bad)
+
+
+## Step 2: Make a guess at a solution
+
+Those who use Civicboom will see that our profile page has two parts -- on the left side of the screen is the user's private information, articles, to-do lists, etc. On the right side of the screen is a list of featured articles -- the latest questions, most active discussions, most viewed stories, etc. Since the information there is all totally public, and it doesn't matter if it is a few minutes out of date, what happens if we cache it?
+
+

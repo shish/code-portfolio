@@ -1,0 +1,269 @@
+<!--#set var="title" value="Monkey Swarm" -->
+<!--#set var="subtitle" value="How many chimps can you handle?" -->
+<!--#include file="static/header.html"-->
+<div class="waffle">
+
+<!--#include file="static/gnav.html"-->
+<ul id="nav">
+	<li class="title"><a href="#top">Monkeys</a></li>
+	<li class="current"><a href="#intro">Introduction</a></li>
+	<li><a href="#hello-world">Hello World</a></li>
+	<li><a href="#extras">Extra Features</a></li>
+	<li><a href="#demo">Download</a></li>
+	<li><a href="#example1">Example #1</a></li>
+	<li><a href="#example2">Example #2</a></li>
+	<li><a href="#get-it">Buy</a></li>
+	<li><a href="#changelog">Changelog</a></li>
+	<li><a href="#faqs">FAQs</a></li>
+	<li><a href="#comparisons">Comparisons</a></li>
+	<li><a href="#contact">Contact</a></li>
+</ul>
+
+<div id="intro">
+	<img class="head" src="monkeys/header.png">
+	<h2>Monkeys? I like monkeys!</h2>
+	<p>And so do we! <a href="#faqs">Monkeys</a> are really good &ndash; you can
+	train them to do simple jobs, and they'll keep doing them over and over;
+	you can even have lots of monkeys doing their jobs at the same time!
+	<p>Here at Boom Towers, we have a large collection of monkeys. Normally,
+	having lots of monkeys in a small space would be a recipe for trouble &ndash;
+	but fear not! We have used our (slightly) more advanced brains to come
+	up with a system for managing them. Today, we offer this technology to
+	you &ndash; you too can become a Monkey Lord!
+</div>
+
+<div id="hello-world">
+	<h2>Yes! I want to be a Monkey Lord!</h2>
+	<p>Great! First, we will need a couple of monkeys:
+	<p>Monkey number one: let's train him to do a really simple task - just
+	have it take a look at the front page of our website:
+	<!--#include file="monkeys/frontpage.py.html"-->
+	<p>Monkey number two has a slightly more intricate job to do; it will
+	log into our website, post a new story, and then update that story.
+	<!--#include file="monkeys/upload.py.html"-->
+	<p>With our two test-monkeys prepared, let's head over to the website
+	and see how they handle it...
+</div>
+
+<div id="extras">
+	<h2>Do these monkeys come pre-trained with cool tricks?</h2>
+	<p>They sure do!
+	<ul>
+	<li>All basic monkeys come with the skills needed to interact with a
+	website; they can GET things to read, POST updates, and even upload files.
+	<li>Monkeys can paint! In order to keep a fresh supply of unique files,
+	our monkeys are trained to create semi-random PNG images.
+	<li>You can breed monkeys too! If you find that you need a lot of monkeys
+	with the same basic skills, you can create one parent monkey with those
+	skills, and then a set of children who use them in different ways.
+	<!-- <li>With the right training, monkeys can do much more than just prodding
+	web servers! While the ones we supply are bred for web work, you have the
+	entire Python standard library at your disposal &ndash; you could train them
+	to send emails, add data to your database, or just chill out and listen
+	to your music collection. -->
+	<li>Monkey Swarm makes an <i>excellent</i> companion for <a href="/context">Context</a> -
+	with a hundred monkeys bashing away at your front end, giving you warnings
+	like "Page X is unusually slow", you can use Context to look at Page X
+	and see precisely what's happening under the hood.
+	(<a rel="lightbox" title="The results of a Monkey Swarm attacking Civicboom" href="context/monkeys.800.png">Screenshot</a>).
+	<li>Once the monkeys are all tired out, the statistics that they've gathered
+	can be charted for an easier overview
+	(<a rel="lightbox" title="Time Chart view" href="monkeys/chart.png">Screenshot</a>).
+	</ul>
+</div>
+
+<div id="demo">
+	<h2>That's pretty cool, let me have a go!</h2>
+	<p>If you're convinced already and want to start using it for your commercial
+	sites, you can skip straight down to <a href="#get-it">buy the commercial
+	version</a>; if you want to get to know it a bit better first, try the
+	personal use / evaluation version, and then follow along with the examples.
+
+	<table class="demo-download">
+		<tr>
+			<td><a href="/monkeys/monkey-swarm-demo.tgz"><img class="icon" src="static/os_linux.png"><br>Linux (13MB)</a></td>
+			<td><a href="/monkeys/monkey-swarm-demo.exe"><img class="icon" src="static/os_windows.png"><br>Windows (7MB)</a></td>
+			<td><a href="/monkeys/monkey-swarm-demo.dmg"><img class="icon" src="static/os_osx.png"><br>OSX (17MB)</a></td>
+		</tr>
+	</table>
+
+	<p>If you have any issues running the demo versions, please <a href="#contact">let us know</a>;
+	we want you to be able to see how lovely they are :-)
+</div>
+
+<div id="example1">
+	<h2>Can I see how this works on a real problem?</h2>
+	<p>Sure, here's a relatively simple example of how I've used it myself:
+
+	<p>To start with, we have a theory that the profile page is slow; it runs
+	~14 moderately heavy database queries on every page load and there is no
+	caching at all.
+
+	<p><b>Step 1:</b> Confirm our suspicion that the page really is slow.
+
+	<p>It can be very tempting to optimise based on what you think <i>should</i>
+	be slow, rather than looking at what <i>is</i> slow. So let's make a little
+	monkey who loads the profile page and records how fast it loads.
+
+	<!--#include file="monkeys/profile.py.html"-->
+
+	<p>with this simple monkey trained, we can run it a few times:
+
+<pre>
+$ ./monkey-swarm --tribe civicboom --monkey profile -r 5 -w
+
+[...]
+
+---- Results:
+   num    min    max    ave    h/s    url
+     5  1.244  1.323  <b>1.263</b>   0.79  GET /profile
+     5  0.059  0.091  0.080  12.44 POST /account/signin.json
+    10  0.059  1.323  0.672   6.61 
+</pre>
+
+	<p>So we see that signing in takes an average of 0.08 seconds, but then
+	loading the user's profile takes 1.26 &ndash; if we define "acceptable" as
+	"under one second", then it is clear that users have a problem as soon
+	as they log in. (Our live server is about 4x as fast as my testing
+	laptop, but even then, 0.31s has room for improvement)
+
+
+	<p><b>Step 2:</b> Make a guess at a solution.
+
+	<p>Those who use Civicboom will see that our profile page has two parts &ndash;
+	on the left side of the screen is the user's private information, articles,
+	to-do lists, etc. On the right side of the screen is a list of featured
+	articles &ndash; the latest questions, most active discussions, most viewed
+	stories, etc. Since the information there is all totally public, and it
+	doesn't matter if it is a few minutes out of date, what happens if we cache it?
+
+	<p>(Shish goes away and adds the <code>@cacheable</code> decorator to the
+	featured content list)
+
+	<p><b>Step 3:</b> Test that our solution actually helps.
+
+<pre>
+$ ./monkey-swarm --tribe civicboom --monkey profile -r 5 -w
+
+[...]
+
+---- Results:
+   num    min    max    ave    h/s    url
+     5  0.620  0.730  <b>0.648</b>   1.54  GET /profile
+     5  0.056  0.081  0.068  14.62 POST /account/signin.json
+    10  0.056  0.730  0.358   8.08 
+</pre>
+
+	<p>Hooray, we have doubled the speed of the profile page, and we have some
+	hard numbers proving that we aren't just imagining the improvement \o/
+</div>
+
+<div id="example2">
+	<h2>Loading one page? That's easy, show me something hard</h2>
+	<p>Ok, here are some more advanced monkeys, part of our Civicboom testing
+	tribe:
+	<p>A monkey that looks at our API to find the most recently posted articles,
+	then picks a few at random to look at:
+	<!--#include file="monkeys/browse_content.py.html"-->
+	<p>A monkey who generates a random image to attach to an article:
+	<!--#include file="monkeys/post_image.py.html"-->
+	<p><a rel="lightbox" title="Results \o/" href="monkeys/example2.png">Results</a> /o/
+</div>
+
+<div id="get-it">
+	<h2>Awesome! Sign me up!</h2>
+	<a href="/purchase/begin/monkeys"><img class="icon" src="/static/buy_now_25.png" align="right"></a>
+	<!--
+	<p>We aren't quite ready to start selling yet, but enter your email and
+	we'll let you know when we are!
+	
+	<iframe src="/interest/register" frameborder="0" scrolling="no" style="width: 100%;height: 2em;"></iframe>
+	-->
+
+	<!--
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	<a href="/purchase/begin/bundle-1"><img class="icon" src="/static/buy_combo.png"></a>
+	-->
+
+	<p>What do you get when you buy Monkey Swarm?
+	<ul>
+	<li>Access to download and re-download the software, for all platforms, from our website
+	<li>A license for one person to use it (<a href="mailto:team@boomtools.co.uk">contact us</a> for bulk licensing)
+	<li>Free updates
+	<li>Online support from the people who wrote it
+	<li>A warm fuzzy feeling inside :-)
+	</ul>
+
+	<center><a href="/purchase/begin/monkeys"><img src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" class="icon"></a></center>
+</div>
+
+<div id="changelog">
+	<h2>Ooh! A new version! What's in it?</h2>
+	<a href="http://twitter.com/#!/boomtools">Follow boomtools on twitter to keep up with updates as they happen~</a>
+	<h3>v1.1</h3>
+	<ul>
+	<li>.5: Improved packaging, tidyups, demo for windows
+	<li>.4: First release with a demo
+	<li>.3: OSX packaging improvements
+	<li>.2: Windows file-type associations
+	<li>.1: HTTPS and non-default-port-number support
+	<li>.0: Analyse &rarr; Time Chart
+	</ul>
+	<h3>v1.0</h3>
+	<ul>
+	<li>.2: Extra compatibility for OSX packages
+	<li>.1: Extra compatibility for Windows and Linux packages
+	<li>.0: Initial release
+	</ul>
+</div>
+
+<div id="faqs">
+	<h2>FAQs</h2>
+	<h3>Isn't this animal cruelty?</h3>
+	<p>These are not actual real monkeys in the mammal sense of the word!
+	The monkeys we are using are software monkeys &ndash; short bits of code
+	designed to autonomously interact with other computer systems.
+
+	<h3>What platforms do the monkeys run on?</h3>
+	<p>Recent versions of Windows, Linux, and OSX are natively supported.
+	<p>To be exact:
+	<ul>
+		<li>Windows - XP or newer (tested on XP and win7)
+		<li>Linux - Ubuntu 11.04 and newer (other / older distros should work
+		fine, and the windows version works in WINE)
+		<li>OSX - Intel 10.6+ (Also, the windows version works acceptably under WINE)
+	</ul>
+</div>
+
+<div id="comparisons">
+	<h2>I already have a box of hammers, why do I need a screwdriver?</h2>
+	<h3>Why shouldn't I just use ApacheBench / Siege / etc?</h3>
+	<p>These tools are great for testing web <i>servers</i>, they tell you
+	how long it takes to create a TCP connection, how many bytes per second get
+	transferred, etc. They aren't so great for testing web <i>sites</i>
+	though &mdash; Monkey Swarm will interact with your site at a higher level,
+	logging in, browsing pages, uploading new data, etc.
+
+	<h3>How does this compare to Selenium?</h3>
+	<p><a href="http://seleniumhq.org/" target="blank">Selenium</a> uses one virtual user at a time, checking that your website
+	<i>works correctly</i>; Monkey Swarm runs many virtual users and checks
+	that your website <i>performs well at scale</i>. We recommend using both
+	of them together, as both aspects are important for success.
+
+	<h3>What about Charles?</h3>
+	<p><a href="http://www.charlesproxy.com/" target="blank">Charles</a>
+	<i>analyses</i> your web traffic, Monkey Swarm <i>creates</i> traffic.
+	As above, both of these levels are important to understand, so we
+	recommend using both tools.
+</div>
+
+<div id="contact">
+	<h2>I have more questions!</h2>
+	<p>Feel free to email us at <a href="mailto:developers+SPAMGUARD@boomtools.co.uk">developers@boomtools.co.uk</a>;
+	paid customers receive priority support, but we aim to answer all questions within a working day or two :-)
+</div>
+
+</div>
+<!--#include file="static/footer.html"-->
