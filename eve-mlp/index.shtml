@@ -1,0 +1,68 @@
+<!--#set var="title" value="Mobile Launch Platform" -->
+<!--#set var="extra-css" value="" -->
+<!--#include file="/assets/header.shtml" -->
+<!--#include file="/assets/navbar.html" -->
+
+<style>
+.ss {
+	border: 1px solid #888;
+	box-shadow: 0px 0px 5px #888888;
+}
+</style>
+
+<div class="container">
+	<div class="page-header">
+		<h1>Mobile Launch Platform</h1>
+	</div>
+	<div class="row">
+		<div class="span12">
+
+<p>A portable (cross-platform) EVE Online launcher</p>
+
+<p>Current version: 0.1.1 - now with per-character launch buttons, and working(-ish) binaries for windows \o/
+
+<ul>
+	<li>
+		Windows:
+		<a href="eve-gmlp-0.1.1.zip">Graphical</a> /
+		<a href="eve-mlp-0.1.1.zip">Command Line</a>
+	</li>
+	<li>
+		Linux 64-bit:
+		<!--<a href="eve-gmlp-0.0.0">Graphical</a> /-->
+		<a href="eve-mlp-0.0.4.tar.gz">Command Line</a> (GUI works from source, binary build crashes due to pyinstaller bugs :( )
+	</li>
+	<li>
+		Source:
+		<a href="https://github.com/shish/eve-mlp">GitHub</a> /
+		<a href="https://github.com/shish/eve-mlp/archive/master.zip">Zip</a>
+	</li>
+</ul>
+
+<h2>Remember all your usernames</h2>
+<p>Launch all of them at once</p>
+<div style="position: relative;">
+	<img src="charlist.png" class="ss">
+	<iframe src="news.html" frameborder="no" style="position: absolute; top: 89px; left: 305px; width: 318px; height: 352px;"></iframe>
+</div>
+
+<h2>Remember passwords</h2>
+<p>One master password, used as AES encryption key to safely store the rest</p>
+<img src="master.png" class="ss">
+
+<h2>Systray icon</h2>
+<p>Double click to hide main window</p>
+<p>Right click &rarr; launch character</p>
+<img src="systray.png" class="ss">
+
+<p>&nbsp;
+
+			<p><a href="../">&laquo; Back to Shish's Code</a>
+		</div>
+        <div class="span8">
+
+
+		</div>
+	</div>
+
+<!--#include file="/assets/footer.html" -->

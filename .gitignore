@@ -5,6 +5,8 @@
 *.exe
 *.dmg
 *.tgz
+*.zip
+*.tar.gz
 *.py.html
 *.php.html
 *.java.html
