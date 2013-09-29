@@ -16,6 +16,7 @@ BODY {
 	<ul class="nav nav-pills">
 		<li><a href="#misc">Misc Bits</a></li>
 		<li><a href="#games">Games & Entertainment</a></li>
+		<li><a href="#libraries">Libraries</a></li>
 		<li><a href="#web-apps">Web Apps</a></li>
 		<li><a href="#web-sites">Web Sites</a></li>
 		<li><a href="#other">Other</a></li>
@@ -36,31 +37,31 @@ BODY {
 		</div>
 		<div class="row">
 			<div class="span4">
-				<h2>Apache2RRD</h2>
-				<a class="thumbnail" href="https://github.com/shish/apache2rrd"><img src="thumbs/a2r-360x150.png"></a>
-				<p>Turns apache (or compatible) log files into RRD files, and from there into graphs of browser use, hits and traffic.</p>
+				<h2>Firehose</h2>
+				<a class="thumbnail" href="https://github.com/shish/firehose"><img src="thumbs/firehose-360x150.png"></a>
+				<p>A GPG based chat system with traffic analysis resistance.</p>
 			</div>
 			<div class="span4">
-				<h2>SQLiteShelf</h2>
-				<a class="thumbnail" href="https://github.com/shish/sqliteshelf"><img src="thumbs/sqlsh-360x150.png"></a>
-				<p>Allows an SQLite database to be used as a python dictionary with persistant storage.</p>
+				<h2>Context</h2>
+				<a class="thumbnail" href="/context"><img src="thumbs/context-360x150.jpg"></a>
+				<p>A profiling tool that shows how long each section of code takes, <em>and what context that code is running in</em>, something that every other profiler seems to ignore.</p>
 			</div>
+			<div class="span4">
+				<h2>Monkey Swarm</h2>
+				<a class="thumbnail" href="/monkeys"><img src="thumbs/monkeys-360x150.jpg"></a>
+				<p>A tool to simulate having many users <em>interacting</em> with a website at once, not just hitting the front page.</p>
+			</div>
+		</div>
+		<div class="row">
 			<div class="span4">
 				<h2>CSB</h2>
 				<a class="thumbnail" href="https://github.com/shish/csb"><img src="thumbs/csb-360x150.png"></a>
 				<p>A Curses-based SQL Browser, allowing users to edit database tables like a spreadsheet.</p>
 			</div>
-		</div>
-		<div class="row">
 			<div class="span4">
 				<h2>Zelda</h2>
 				<a class="thumbnail" href="https://github.com/shish/zelda"><img src="thumbs/zelda-360x150.jpg"></a>
 				<p>A tool to convert apache logs to a binary format; conversion is much faster than compression, and results are 15% the size of plain text.</p>
-			</div>
-			<div class="span4">
-				<h2>WP Deus Ex</h2>
-				<a class="thumbnail" href="https://github.com/shish/wp_deusex"><img src="thumbs/wp-deusex-360x150.jpg"></a>
-				<p>A Deus Ex theme for wordpress, as used on <a href="http://blog.shishnet.org">my blog</a>. Most images and graphics &copy; Ion Storm 2000, please don't sue me.</p>
 			</div>
 			<div class="span4">
 				<h2>PyGE</h2>
@@ -75,14 +76,14 @@ BODY {
 				<p>Turn a folder full of images into a single .png sprite sheet with .css file to pick out the individual parts. An open-source Civicboom side-project.</p>
 			</div>
 			<div class="span4">
-				<h2>Context</h2>
-				<a class="thumbnail" href="/context"><img src="thumbs/context-360x150.jpg"></a>
-				<p>A profiling tool that shows how long each section of code takes, <em>and what context that code is running in</em>, something that every other profiler seems to ignore.</p>
+				<h2>Apache2RRD</h2>
+				<a class="thumbnail" href="https://github.com/shish/apache2rrd"><img src="thumbs/a2r-360x150.png"></a>
+				<p>Turns apache (or compatible) log files into RRD files, and from there into graphs of browser use, hits and traffic.</p>
 			</div>
 			<div class="span4">
-				<h2>Monkey Swarm</h2>
-				<a class="thumbnail" href="/monkeys"><img src="thumbs/monkeys-360x150.jpg"></a>
-				<p>A tool to simulate having many users <em>interacting</em> with a website at once, not just hitting the front page.</p>
+				<h2>WP Deus Ex</h2>
+				<a class="thumbnail" href="https://github.com/shish/wp_deusex"><img src="thumbs/wp-deusex-360x150.jpg"></a>
+				<p>A Deus Ex theme for wordpress, as used on <a href="http://blog.shishnet.org">my blog</a>. Most images and graphics &copy; Ion Storm 2000, please don't sue me.</p>
 			</div>
 		</div>
 	</section>
@@ -106,19 +107,55 @@ BODY {
 		</div>
 		<div class="row">
 			<div class="span4">
+				<h2>The Molyneux Experience</h2>
+				<a class="thumbnail" href="http://sites.shishnet.org/molyex/"><img src="thumbs/molyex-360x150.jpg"></a>
+				<p>What would it be like, to be Him for a day? A Molyjam 2013 entry.</p>
+			</div>
+			<div class="span4">
+				<h2>Mobile Launch Platform</h2>
+				<a class="thumbnail" href="/eve-mlp/"><img src="thumbs/eve-mlp-360x150.jpg"></a>
+				<p>A simple, functional, unofficial launcher for EVE Online, made after a wave of complaints that the official launcher was getting further and further from what players wanted.</p>
+			</div>
+			<div class="span4">
 				<h2>Whack-a-square</h2>
 				<a class="thumbnail" href="java4k/"><img src="thumbs/was-360x150.png"></a>
 				<p>My entry into the Java 4K game competition; trying to squeeze as much fun as possible into a 4096 byte .jar file. It was 2676 bytes with no attempts to shrink the code, just by being a simple game :P</p>
 			</div>
-			<div class="span4">
+		</div>
+		<div class="row">
+			<div class="span6">
 				<h2>EFDG</h2>
-				<a class="thumbnail" href="deathcamp/"><img src="thumbs/deathcamp-360x150.jpg"></a>
+				<a class="thumbnail" href="deathcamp/"><img src="thumbs/deathcamp-560x150.jpg"></a>
 				<p>For GCSE Religious Studies lesson we were asked to make a game which would draw attention to an important religious issue. Our game was "Escape From Deathcamp Gugen&shy;schluben", which teaches players that nazi deathcamps are unpleasant.</p>
 			</div>
-			<div class="span4">
+			<div class="span6">
 				<h2>CarMuse</h2>
-				<a class="thumbnail" href="http://hacks.rewiredstate.org/events/power-of-minds/car-muse"><img src="thumbs/carmuse-360x150.jpg"></a>
+				<a class="thumbnail" href="http://hacks.rewiredstate.org/events/power-of-minds/car-muse"><img src="thumbs/carmuse-560x150.jpg"></a>
 				<p>The Boom Rangers' entry into Honda's "Power of Dreams" hack weekend. Takes events from a synthesized engine management system (speed, gear change, etc) and generates appropriate "music". Won the "Best Technology" award. <a href="http://www.youtube.com/watch?v=wT5YEm9PAMs">Video</a></p>
+			</div>
+		</div>
+	</section>
+
+
+	<section id="libraries">
+		<div class="page-header">
+			<h1>Libraries <small>For sharing features :3</small></h1>
+		</div>
+		<div class="row">
+			<div class="span4">
+				<h2>Python-Flexihash</h2>
+				<a class="thumbnail" href="https://github.com/shish/python-flexihash"><img src="thumbs/flexihash-360x150.png"></a>
+				<p>A consistent hashing library, python implementation almost 1:1 compatible with the PHP original.</p>
+			</div>
+			<div class="span4">
+				<h2>SQLiteShelf</h2>
+				<a class="thumbnail" href="https://github.com/shish/sqliteshelf"><img src="thumbs/sqlsh-360x150.png"></a>
+				<p>Allows an SQLite database to be used as a python dictionary with persistant storage.</p>
+			</div>
+			<div class="span4">
+				<h2>Spawn-FCGI.php <small>Beta</small></h2>
+				<a class="thumbnail" href="https://github.com/shish/spawn-fcgi.php"><img src="thumbs/sfcgip-360x150.png"></a>
+				<p>Run any FastCGI app on a PHP-only web host.</p>
 			</div>
 		</div>
 	</section>
@@ -142,19 +179,31 @@ BODY {
 		</div>
 		<div class="row">
 			<div class="span4">
-				<h2>Rav</h2>
-				<a class="thumbnail" href="http://rav.shishnet.org"><img src="thumbs/rav-360x150.jpg"></a>
-				<p>An avatar hosting service that offers up a random avatar from the user's selection each time. Also allows users to turn their avatar collections into Facebook profile page banners.</p>
+				<h2>Turnabout Tracker <small>Alpha</small></h2>
+				<a class="thumbnail" href="http://github.com/shish/turnabout"><img src="thumbs/turnabout-360x150.jpg"></a>
+				<p>An attempt to make some project management software that isn't completely shit.</p>
+			</div>
+			<div class="span4">
+				<h2>Rate Here, Rate Now</h2>
+				<a class="thumbnail" href="http://www.ratehereratenow.com"><img src="thumbs/rhrn-360x150.jpg"></a>
+				<p>Stick happy or sad faces on a map, so that I can figure out which street to live in.</p>
 			</div>
 			<div class="span4">
 				<h2>Siggy</h2>
 				<a class="thumbnail" href="http://siggy.shishnet.org/"><img src="thumbs/siggy-360x150.jpg"></a>
 				<p>Quotes database with an image output suitable for linking to from a forum signature.</p>
 			</div>
-			<div class="span4">
+		</div>
+		<div class="row">
+			<div class="span6">
+				<h2>Rav</h2>
+				<a class="thumbnail" href="http://rav.shishnet.org"><img src="thumbs/rav-560x150.jpg"></a>
+				<p>An avatar hosting service that offers up a random avatar from the user's selection each time. Also allows users to turn their avatar collections into Facebook profile page banners.</p>
+			</div>
+			<div class="span6">
 				<h2>Travmap</h2>
-				<a class="thumbnail" href="http://travmap.shishnet.org/"><img src="thumbs/travmap-360x150.jpg"></a>
-				<p>A tool to make maps of various Travian worlds. Mostly untouched since I stopped playing Travian, it's been happily keeping itself up-to-date for four years.</p>
+				<a class="thumbnail" href="http://travmap.shishnet.org/"><img src="thumbs/travmap-560x150.jpg"></a>
+				<p>A tool to make maps of various Travian worlds. Mostly untouched since I stopped playing Travian, it's been happily keeping itself up-to-date for seven years.</p>
 			</div>
 		</div>
 	</section>
