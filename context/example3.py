@@ -1,8 +1,8 @@
-import context as c
+import context.api as ctx
 
 # your program as normal goes here
 
 if __name__ == "__main__":
-    c.set_log("example.ctxt")
-    c.set_profile(True)
+    ctx.set_log("file://example.ctxt")
+    ctx.set_profile(True)
     main()

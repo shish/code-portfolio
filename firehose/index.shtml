@@ -1,0 +1,38 @@
+<!--#set var="title" value="Firehose" -->
+<!--#set var="extra-css" value="" -->
+<!--#include file="/assets/header.shtml" -->
+<!--#include file="/assets/navbar.html" -->
+
+<div class="container">
+	<div class="page-header">
+		<h1>Firehose</h1>
+		<h2>You want my chat traffic? Sure, take it</h2>
+	</div>
+	<div class="row">
+		<div class="span6">
+
+<p>An encrypted chat program designed to avoid some common
+pitfalls (and probably fall into some uncommon ones, since
+the author isn't a cryptography expert)</p>
+
+<p>TL;DR: it allows you to broadcast messages to thousands
+of people (reducing the effectiveness of traffic analysis).
+Messages are encrypted with GPG, so that only the intended
+recipient will be able to decode them (I'm not stupid enough
+to roll my own encryption / message signing framework)</p>
+
+<p>Public broadcasting of secret data would normally be bad,
+but if they're sniffing it anyway, we might as well build a
+system that can handle it...</p>
+
+<ul>
+	<li><a href="http://github.com/shish/firehose">Source (Github)</a></li>
+	<li>No binary builds until I see some interest in them (there shouldn't be
+	any, because you shouldn't trust random binaries from the internet to be free
+	from backdoors)
+</ul>
+			<p><a href="../">&laquo; Back to Shish's Code</a>
+		</div>
+	</div>
+
+<!--#include file="/assets/footer.html" -->

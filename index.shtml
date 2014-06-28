@@ -102,7 +102,7 @@ BODY {
 			<div class="span6">
 				<h2>Lemonade</h2>
 				<a class="thumbnail" href="https://github.com/shish/lemonade"><img src="thumbs/lemonade-560x150.png"></a>
-				<p>A rather fruity Ascii Demo Engine. For GCSE computing we were told to make a presentation about floating point binary - Seeing as I dislike Powerpoint, I decided to make a flipbook style animation in Notepad. Then, since 'press the PgDn key' is a sucky form of animation, I wrote an animation engine and compressed the whole lot to 1867 bytes. <a href="http://www.youtube.com/watch?v=Lw9nuWL0vAU">See the results</a></p>
+				<p>A rather fruity Ascii Demo Engine. For GCSE computing we were told to make a presentation about floating point binary - Seeing as I dislike Powerpoint, I decided to make a flipbook style animation in Notepad. Then, since 'press the PgDn key' is a sucky form of animation, I wrote an animation engine and compressed the whole lot to 1867 bytes. <a href="/videos/floating_point.html">See the results</a></p>
 			</div>
 		</div>
 		<div class="row">
@@ -126,12 +126,16 @@ BODY {
 			<div class="span6">
 				<h2>EFDG</h2>
 				<a class="thumbnail" href="deathcamp/"><img src="thumbs/deathcamp-560x150.jpg"></a>
-				<p>For GCSE Religious Studies lesson we were asked to make a game which would draw attention to an important religious issue. Our game was "Escape From Deathcamp Gugen&shy;schluben", which teaches players that nazi deathcamps are unpleasant.</p>
+				<p>For GCSE Religious Studies lesson we were asked to make a game which would draw
+				attention to an important religious issue. Our game was "Escape From Deathcamp
+				Gugen&shy;schluben", which teaches players that nazi deathcamps are unpleasant.</p>
 			</div>
 			<div class="span6">
 				<h2>CarMuse</h2>
 				<a class="thumbnail" href="http://hacks.rewiredstate.org/events/power-of-minds/car-muse"><img src="thumbs/carmuse-560x150.jpg"></a>
-				<p>The Boom Rangers' entry into Honda's "Power of Dreams" hack weekend. Takes events from a synthesized engine management system (speed, gear change, etc) and generates appropriate "music". Won the "Best Technology" award. <a href="http://www.youtube.com/watch?v=wT5YEm9PAMs">Video</a></p>
+				<p>The Boom Rangers' entry into Honda's "Power of Dreams" hack weekend. Takes events
+				from a synthesized engine management system (speed, gear change, etc) and generates
+				appropriate "music". Won the "Best Technology" award. <a href="/videos/car_muse.html">Video</a></p>
 			</div>
 		</div>
 	</section>
@@ -212,6 +216,18 @@ BODY {
 	<section id="web-sites">
 		<div class="page-header">
 			<h1>Web Sites <small>Web 1.0 tech with web 1.0 design skills</small></h1>
+		</div>
+		<div class="row">
+			<div class="span6">
+				<h2>TPA Heatmaps</h2>
+				<a class="thumbnail" href="http://sites.shishnet.org/tpa-heatmaps/"><img src="thumbs/tpah-560x150.jpg"></a>
+				<p>A lot of spreadsheet data, made presentable. From National Hack The Government Day 2013.</p>
+			</div>
+			<div class="span6">
+				<h2>Pictotrade</h2>
+				<a class="thumbnail" href="http://pictotrade.dfid.rewiredstate.org/"><img src="thumbs/pictotrade-560x150.jpg"></a>
+				<p>An interactive diagram for exploring international trade factors. From Department for International Development Data Challenge 2012.</p>
+			</div>
 		</div>
 		<div class="row">
 			<div class="span4">

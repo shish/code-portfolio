@@ -1,21 +1,21 @@
 from time import sleep
-import context as c
+import context.api as ctx
 
-@c.log("Printing hello")
+@ctx.log("Printing hello")
 def function_a():
     print("hello")
     sleep(0.5)
 
-@c.log("Printing world")
+@ctx.log("Printing world")
 def function_b():
     print("world")
     sleep(0.1)
 
-@c.log("Main loop", bookmark=True)
+@ctx.log("Main loop", bookmark=True)
 def main():
     function_a()
     function_b()
 
 if __name__ == "__main__":
-    c.set_log("example.ctxt")
+    ctx.set_log("file://example.ctxt")
     main()
