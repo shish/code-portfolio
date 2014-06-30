@@ -1,0 +1,19 @@
+    value_before = obj.calc_value()
+    obj.set_state(foo)
+    value_after = obj.calc_value()
+
+can be much simpler and more reliable than
+
+    value_before = obj.calc_value()
+    state_before = obj.state
+    obj.set_state(foo)
+
+    if state_before == "a" and state_after == "b":
+        value_after = value_before + 1
+    if state_before == "b" and state_after == "c":
+        value_after = value_before + 2
+    if state_before == "a" and state_after == "c":
+        value_after = value_before + 3
+    if state_before == "c" and state_after == "a":
+        value_after = value_before - 3
+    [...]
