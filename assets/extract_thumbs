@@ -18,7 +18,7 @@ def main(argv):
 
             output = os.path.join(base, name + "-" + size + "." + ext)
             sources = glob(os.path.join(base, name + ".*"))
-            print sources
+            #print sources
             sources = filter(lambda x: re.match(".*\.(jpg|png|gif|xcf)", x), sources)
             if len(sources) == 0:
                 print "Can't find source for " + output
