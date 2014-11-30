@@ -1,3 +1,4 @@
+<?php
 require_once "lib/context.php";
 ctx_set_log("shimmie.ctxt");
 

@@ -291,6 +291,22 @@
 <div id="changelog">
 	<h2>Ooh! A new version! What's in it?</h2>
 	<a href="http://twitter.com/shish2k">Follow Shish on twitter to keep up with updates as they happen~</a>
+	<h3>v2.0</h3>
+	<ul>
+	<li>.0:
+		<ul>
+		<li>Rewritten Compiler in Go for a 2x speed boost
+		<li>Rewritten Viewer in <a rel="lightbox" title="New GUI with GTK" href="gtk.png">Go/GTK/Cairo</a> for a ~100x speed boost
+		<li>Support for <a rel="lightbox" title="Display locks (red=waiting, blue=using)" href="locks.png">displaying lock states</a>
+		<li><a rel="lightbox" title="Stack Depth Controls" href="stack.gif">Stack depth</a> controls
+		<li><a rel="lightbox" title="Event Coalescing" href="coalesce.gif">Event coalescing</a> -- rather than 1000 1-pixel events, see one block of "1000 x $event"
+		<li>Option to <a rel="lightbox" title="Show bookmarks on canvas" href="render-bookmarks.png">render bookmarks</a> on the canvas
+		<li>Bake more data into the .cbin, so the same data isn't recalculated each time the file is opened
+		<li>Only show threads with content in the specified time range
+		<li>Better maths to avoid off-by-one-pixel rendering issues
+		<li>Way more error handling for corrupt files
+		</ul>
+	</ul>
 	<h3>v1.2</h3>
 	<ul>
 	<li>.1: Variable cutoff, faster data loading, faster rendering.

@@ -1,3 +1,4 @@
+<?php
 function get_active_bans() {
     global $database;
 
