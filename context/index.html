@@ -135,7 +135,7 @@
 			<div style="padding: 16px;">
 				We currently have APIs for C/C++, Java, PHP, Perl, Python, and VB.net;
 				more examples will arrive later (with priorities based on what
-				<a href="#contact">we get asked for</a>)
+				<a href="#contact">I get asked for</a>)
 			</div>
 		</div>
 	</div>
@@ -150,14 +150,17 @@
 	<a href="http://www.civicboom.com/" target="blank">Civicboom</a> is using it to hunt for
 	performance issues in a ~50kloc codebase with no difficulty at all :-)
 	<h3>Annotations? Bleh.</h3>
-	Yeah, when trying to get a large amount of detail out of a small amount of
+	<p>Yeah, when trying to get a large amount of detail out of a small amount of
 	code, as in these examples, the annotations do seem a little overwhelming;
 	but you rarely need to annotate anywhere near that much &mdash; at civicboom
 	we've found that three annotations (start/end of page view, start/end of
 	database query, and start/end of template rendering) has helped us diagnose
 	about 90% of our performance problems. Check out <a href="#example1">the
 	full-size app example</a> to see how much benefit you can get from 6
-	annotations over 40k lines of code.
+	annotations over 40k lines of code.</p>
+	<p>If you REALLY hate annotations, there are low-level profiler interfaces
+	for some languages which will allow you to automatically trace every call
+	to every function.</p>
 </div>
 
 <div id="extras">
@@ -189,6 +192,7 @@
 	</ul>
 </div>
 
+<!--
 <div id="demo">
 	<h2>That's pretty cool, let me have a go!</h2>
 	<p>If you're convinced already and want to start using it for your commercial
@@ -215,6 +219,7 @@
 	<p>If you have any issues running the demo versions, please <a href="#contact">let us know</a>;
 	we want you to be able to see how lovely they are :-)
 </div>
+-->
 
 <div id="example1">
 	<h2>Can I see how this works on a real problem?</h2>
@@ -278,14 +283,17 @@
 	<p>From ~250ms per page down to 65ms, our server has gone from ~80% CPU use down
 	to 20% &mdash; and with Context telling us exactly
 	where our attention is needed, the whole process took under 15 minutes :-)
+<!--
 	<p>If you think this is as awesome as I do, <a href="#get-it">buy it</a>!
+-->
 
 </div>
 
 <div id="get-it">
 	<h2>Awesome! Sign me up!</h2>
-	<p>My payment-taking system broke, <a href="mailto:webmaster@shishnet.org">email me</a>
-	if you want a copy :P
+	<p>Context is now open source and free - find it at <a href="https://github.com/shish/context2">github</a>.</p>
+	<p>(Though if you want commercial-level support, that could still be arranged,
+	contact me to discuss pricing)</p>
 </div>
 
 <div id="changelog">
@@ -330,8 +338,8 @@
 
 <div id="contact">
 	<h2>I have more questions!</h2>
-	<p>Feel free to email us at <a href="mailto:webmaster@shishnet.org">webmaster@shishnet.org</a>;
-	paid customers recieve priority support, but we aim to answer all questions within a working day or two :-)
+	<p>Feel free to email me at <a href="mailto:webmaster@shishnet.org">webmaster@shishnet.org</a>;
+	paid customers recieve priority support, but I aim to answer all questions within a working day or two :-)
 </div>
 
 </div>
