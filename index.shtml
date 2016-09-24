@@ -278,14 +278,16 @@ BODY {
 		<div class="row">
 			<div class="span4">
 				<h2>Patch Archive</h2>
-				<p>My contributions to other open source projects</p>
+				<p>Some contributions to oldschool mailing-list-based open source projects</p>
 				<p><a class="btn pull-right" href="https://github.com/shish/patch-archive">View details &raquo;</a></p>
 			</div>
+			<!--
 			<div class="span4">
 				<h2>Really Old Things</h2>
 				<p>Many random bits of code which are old / broken / proof-of-concept only / generally useless and uninteresting</p>
 				<p><a class="btn pull-right" href="#">View details &raquo;</a></p>
 			</div>
+			-->
 			<div class="span4">
 				<h2>My Github account</h2>
 				<p>Stalk my progress o.o</p>
