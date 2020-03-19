@@ -108,7 +108,7 @@ BODY {
 		<div class="row">
 			<div class="span4">
 				<h2>The Molyneux Experience</h2>
-				<a class="thumbnail" href="http://sites.shishnet.org/molyex/"><img src="thumbs/molyex-360x150.jpg"></a>
+				<a class="thumbnail" href="/molyex/"><img src="thumbs/molyex-360x150.jpg"></a>
 				<p>What would it be like, to be Him for a day? A Molyjam 2013 entry.</p>
 			</div>
 			<div class="span4">
