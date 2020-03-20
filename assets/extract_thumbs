@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import sys
 import os
@@ -7,24 +7,24 @@ from glob import glob
 
 def main(argv):
     if len(argv) == 1:
-        print "Usage: %s <html file> [<html file> ...]" % argv[0]
+        print("Usage: %s <html file> [<html file> ...]" % argv[0])
         return 1
 
     pattern = re.compile("([^'\"]+)-(\d*x\d*|screen|full).(jpg|png)")
     for filename in argv[1:]:
         base = os.path.dirname(filename)
-        data = file(filename).read()
+        with open(filename) as fp:
+            data = fp.read()
         for name, size, ext in pattern.findall(data):
-
             output = os.path.join(base, name + "-" + size + "." + ext)
             sources = glob(os.path.join(base, name + ".*"))
             #print sources
-            sources = filter(lambda x: re.match(".*\.(jpg|png|gif|xcf)", x), sources)
+            sources = [x for x in sources if re.match(".*\.(jpg|png|gif|xcf)", x)]
             if len(sources) == 0:
-                print "Can't find source for " + output
+                print("Can't find source for " + output)
                 continue
             if len(sources) >= 2:
-                print "Too many sources for " + output + " (" + ", ".join(sources) + ")"
+                print("Too many sources for " + output + " (" + ", ".join(sources) + ")")
                 continue
             source = sources[0]
 
