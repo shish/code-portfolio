@@ -83,7 +83,7 @@ BODY {
 			<div class="span4">
 				<h2>WP Deus Ex</h2>
 				<a class="thumbnail" href="https://github.com/shish/wp_deusex"><img src="thumbs/wp-deusex-360x150.jpg"></a>
-				<p>A Deus Ex theme for wordpress, as used on <a href="http://blog.shishnet.org">my blog</a>. Most images and graphics &copy; Ion Storm 2000, please don't sue me.</p>
+				<p>A Deus Ex theme for wordpress, as used on <a href="https://blog.shishnet.org">my blog</a>. Most images and graphics &copy; Ion Storm 2000, please don't sue me.</p>
 			</div>
 		</div>
 	</section>
@@ -97,7 +97,7 @@ BODY {
 			<div class="span6">
 				<h2>Kuri2D</h2>
 				<a class="thumbnail" href="https://github.com/shish/kuri2d"><img src="thumbs/kuri2d-560x150.jpg"></a>
-				<p>A very simple <a href="http://en.wikipedia.org/wiki/Intelligent_Qube">Kurushi</a> clone in SDL, made to teach myself the C SDL bindings, as well as the now obsolete Autopackage format.</p>
+				<p>A very simple <a href="https://en.wikipedia.org/wiki/Intelligent_Qube">Kurushi</a> clone in SDL, made to teach myself the C SDL bindings, as well as the now obsolete Autopackage format.</p>
 			</div>
 			<div class="span6">
 				<h2>Lemonade</h2>
@@ -132,7 +132,7 @@ BODY {
 			</div>
 			<div class="span6">
 				<h2>CarMuse</h2>
-				<a class="thumbnail" href="http://hacks.rewiredstate.org/events/power-of-minds/car-muse"><img src="thumbs/carmuse-560x150.jpg"></a>
+				<a class="thumbnail" href="https://hacks.rewiredstate.org/events/power-of-minds/car-muse"><img src="thumbs/carmuse-560x150.jpg"></a>
 				<p>The Boom Rangers' entry into Honda's "Power of Dreams" hack weekend. Takes events
 				from a synthesized engine management system (speed, gear change, etc) and generates
 				appropriate "music". Won the "Best Technology" award. <a href="/videos/car_muse.html">Video</a></p>
@@ -144,6 +144,23 @@ BODY {
 	<section id="libraries">
 		<div class="page-header">
 			<h1>Libraries <small>For sharing features :3</small></h1>
+		</div>
+		<div class="row">
+			<div class="span4">
+				<h2>MicroHTML</h2>
+				<a class="thumbnail" href="https://github.com/shish/microhtml"><img src="thumbs/microhtml-360x150.png"></a>
+				<p>After working with HHVM for a while, one of the things I miss most is XHP...</p>
+			</div>
+			<div class="span4">
+				<h2>MicroCRUD</h2>
+				<a class="thumbnail" href="https://github.com/shish/microcrud"><img src="thumbs/microcrud-360x150.png"></a>
+				<p>A library for making CRUD interfaces quickly and simply.</p>
+			</div>
+			<div class="span4">
+				<h2>EventTracer (PHP)</h2>
+				<a class="thumbnail" href="https://github.com/shish/eventtracer-php"><img src="thumbs/eventtracerphp-360x150.png"></a>
+				<p>For profiling PHP code using the Chrome Trace Viewer</p>
+			</div>
 		</div>
 		<div class="row">
 			<div class="span4">
@@ -170,44 +187,54 @@ BODY {
 			<h1>Web Apps <small>Web 2.0 tech with web 0.2 design skills</small></h1>
 		</div>
 		<div class="row">
-			<div class="span6">
+			<div class="span4">
+				<h2>Interest Link</h2>
+				<a class="thumbnail" href="https://link.shishnet.org/"><img src="thumbs/link-360x150.jpg"></a>
+				<p>A system for sharing embarassing secrets in relative (not total) confidence.</p>
+			</div>
+			<div class="span4">
+				<h2>DiveTools</h2>
+				<a class="thumbnail" href="https://scuba.shish.io/"><img src="thumbs/scuba-360x150.jpg"></a>
+				<p>A collection of scuba-diving related calculators.</p>
+			</div>
+			<div class="span4">
 				<h2>Shimmie 2</h2>
-				<a class="thumbnail" href="shimmie2/"><img src="thumbs/shimmie2-560x150.jpg"></a>
+				<a class="thumbnail" href="shimmie2/"><img src="thumbs/shimmie2-360x150.jpg"></a>
 				<p>A Danbooru-style image board, designed to be significantly easier to install, run, and extend. Requires a standard LAMP stack as provided by any normal web host. This is probably my most popular project, with a team of 10 coders, hundreds of installations, and thousands of users online at once.</p>
 			</div>
-			<div class="span6">
+		</div>
+		<div class="row">
+			<div class="span4">
+				<h2>Rav</h2>
+				<a class="thumbnail" href="https://rav.shishnet.org"><img src="thumbs/rav-360x150.jpg"></a>
+				<p>An avatar hosting service that offers up a random avatar from the user's selection each time. Also allows users to turn their avatar collections into Facebook profile page banners.</p>
+			</div>
+			<div class="span4">
+				<h2>Travmap</h2>
+				<a class="thumbnail" href="https://travmap.shishnet.org/"><img src="thumbs/travmap-360x150.jpg"></a>
+				<p>A tool to make maps of various Travian worlds. Mostly untouched since I stopped playing Travian, it's been happily keeping itself up-to-date for seven years.</p>
+			</div>
+			<div class="span4">
 				<h2>CView 3</h2>
-				<a class="thumbnail" href="http://cview.shishnet.org/cview.html"><img src="thumbs/cview3-560x150.jpg"></a>
+				<a class="thumbnail" href="https://github.com/shish/cview3"><img src="thumbs/cview3-360x150.jpg"></a>
 				<p>A pure-AJAX comic viewer -- rather than writing any server-side code, I got javascript to parse Apache's built-in directory indexing output. Should work with any web server that can generate directory indexes, and be almost perfectly fast due to the use of static cacheable files.</p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="span4">
-				<h2>Turnabout Tracker <small>Alpha</small></h2>
-				<a class="thumbnail" href="http://github.com/shish/turnabout"><img src="thumbs/turnabout-360x150.jpg"></a>
+				<h2>Turnabout Tracker</h2>
+				<a class="thumbnail" href="https://github.com/shish/turnabout"><img src="thumbs/turnabout-360x150.jpg"></a>
 				<p>An attempt to make some project management software that isn't completely shit.</p>
 			</div>
 			<div class="span4">
 				<h2>Rate Here, Rate Now</h2>
-				<a class="thumbnail" href="http://www.ratehereratenow.com"><img src="thumbs/rhrn-360x150.jpg"></a>
+				<a class="thumbnail" href="https://www.ratehereratenow.com"><img src="thumbs/rhrn-360x150.jpg"></a>
 				<p>Stick happy or sad faces on a map, so that I can figure out which street to live in.</p>
 			</div>
 			<div class="span4">
 				<h2>Siggy</h2>
-				<a class="thumbnail" href="http://siggy.shishnet.org/"><img src="thumbs/siggy-360x150.jpg"></a>
+				<a class="thumbnail" href="https://github.com/shish/siggy"><img src="thumbs/siggy-360x150.jpg"></a>
 				<p>Quotes database with an image output suitable for linking to from a forum signature.</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="span6">
-				<h2>Rav</h2>
-				<a class="thumbnail" href="http://rav.shishnet.org"><img src="thumbs/rav-560x150.jpg"></a>
-				<p>An avatar hosting service that offers up a random avatar from the user's selection each time. Also allows users to turn their avatar collections into Facebook profile page banners.</p>
-			</div>
-			<div class="span6">
-				<h2>Travmap</h2>
-				<a class="thumbnail" href="http://travmap.shishnet.org/"><img src="thumbs/travmap-560x150.jpg"></a>
-				<p>A tool to make maps of various Travian worlds. Mostly untouched since I stopped playing Travian, it's been happily keeping itself up-to-date for seven years.</p>
 			</div>
 		</div>
 	</section>
@@ -220,51 +247,51 @@ BODY {
 		<div class="row">
 			<div class="span6">
 				<h2>TPA Heatmaps</h2>
-				<a class="thumbnail" href="http://sites.shishnet.org/tpa-heatmaps/"><img src="thumbs/tpah-560x150.jpg"></a>
+				<a class="thumbnail"><img src="thumbs/tpah-560x150.jpg"></a>
 				<p>A lot of spreadsheet data, made presentable. From National Hack The Government Day 2013.</p>
 			</div>
 			<div class="span6">
 				<h2>Pictotrade</h2>
-				<a class="thumbnail" href="http://pictotrade.dfid.rewiredstate.org/"><img src="thumbs/pictotrade-560x150.jpg"></a>
+				<a class="thumbnail"><img src="thumbs/pictotrade-560x150.jpg"></a>
 				<p>An interactive diagram for exploring international trade factors. From Department for International Development Data Challenge 2012.</p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="span4">
 				<h2>KentANIMEted</h2>
-				<a class="thumbnail" href="http://www.animesoc.org.uk/"><img src="thumbs/kat-360x150.jpg"></a>
+				<a class="thumbnail" href="https://www.animesoc.org.uk/"><img src="thumbs/kat-360x150.jpg"></a>
 				<p>For my university's anime society (The design was already there, I just tidied up the back end, automated it, added iCal support, made it scale nicely from HD monitors to sub-mobile devices, ...).</p>
 			</div>
 			<div class="span4">
 				<h2>ContextShift</h2>
-				<a class="thumbnail" href="http://sites.shishnet.org/cs/"><img src="thumbs/cshift-360x150.jpg"></a>
+				<a class="thumbnail"><img src="thumbs/cshift-360x150.jpg"></a>
 				<p>A web / VPS hosting company; a VPS control panel was done in a similar style, but that's only visible to customers.</p>
 			</div>
 			<div class="span4">
 				<h2>TRM</h2>
-				<a class="thumbnail" href="http://sites.shishnet.org/trm/"><img src="thumbs/trm-360x150.jpg"></a>
+				<a class="thumbnail"><img src="thumbs/trm-360x150.jpg"></a>
 				<p>A website for a travel insurance company, I think this was my first paid programming work ever~</p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="span3">
 				<h2>BoomTools</h2>
-				<a class="thumbnail" href="http://www.boomtools.co.uk/"><img src="thumbs/boomtools-260x150.jpg"></a>
+				<a class="thumbnail"><img src="thumbs/boomtools-260x150.jpg"></a>
 				<p>A place to sell Civicboom's side projects</p>
 			</div>
 			<div class="span3">
 				<h2>Animesoc</h2>
-				<a class="thumbnail" href="http://sites.shishnet.org/animesoc/"><img src="thumbs/animesoc-old-260x150.jpg"></a>
+				<a class="thumbnail"><img src="thumbs/animesoc-old-260x150.jpg"></a>
 				<p>The previous design of the Animesoc website; again my work was behind the scenes.
 			</div>
 			<div class="span3">
 				<h2>ShishNet</h2>
-				<a class="thumbnail" href="http://www.shishnet.org/"><img src="thumbs/shishnet-260x150.jpg"></a>
+				<a class="thumbnail" href="https://www.shishnet.org/"><img src="thumbs/shishnet-260x150.jpg"></a>
 				<p>The front page of my site; I had the idea before I saw JWZ's site XP
 			</div>
 			<div class="span3">
 				<h2>Portfolio</h2>
-				<a class="thumbnail" href="http://code.shishnet.org/"><img src="thumbs/code-site-260x150.jpg"></a>
+				<a class="thumbnail" href="https://code.shishnet.org/"><img src="thumbs/code-site-260x150.jpg"></a>
 				<p>I also made this page~</p>
 			</div>
 		</div>
@@ -291,7 +318,7 @@ BODY {
 			<div class="span4">
 				<h2>My Github account</h2>
 				<p>Stalk my progress o.o</p>
-				<p><a class="btn pull-right" href="http://github.com/shish">View details &raquo;</a></p>
+				<p><a class="btn pull-right" href="https://github.com/shish">View details &raquo;</a></p>
 			</div>
 		</div>
 	</section>
