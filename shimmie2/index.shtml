@@ -11,8 +11,7 @@
 		<div class="span4">
 
 <p>A danbooru-style image board, des&shy;igned to be easier to install, run, and extend.</p>
-<p>Requires a standard LAMP stack as provided by any normal web host. It can also use PostgreSQL as a data&shy;base, which is recommended for high-load sites.</p>
-<p>This is probably my most popular project, with a team of 10 coders, hundreds of installations, and thou&shy;sands of users online at once.</p>
+<p>This is probably my most popular project, with 80 contributors, hundreds of installations, and thou&shy;sands of users online at once.</p>
 
 <p>&nbsp;
 
@@ -20,17 +19,16 @@
 	<div class="span2">
 		Links
 		<ul>
-			<li><a href="http://shimmie.shishnet.org/v2/">Live Site</a>
-			<li><a href="http://shimmie.shishnet.org/doc/">Developer Docs</a>
+			<li><a href="http://shimmie.shishnet.org/">Demo Site</a>
+			<li><a href="https://github.com/shish/shimmie2/wiki/Development-Info">Developer Docs</a>
 			<li><a href="https://github.com/shish/shimmie2/issues">Bug Tracker</a>
-			<!--<li><a href="http://shimmie.shishnet.org/hosted/">Free gallery hosting</a>-->
-			<li><a href="http://keul.fr/post/28">Danbooru Importer</a>
 		</ul>
 	</div>
 	<div class="span2">
 		Downloads
 		<ul>
-			<li><a href="https://github.com/shish/shimmie2">Browse Source / Download</a>
+			<li><a href="https://github.com/shish/shimmie2">Source Code</a>
+			<li><a href="https://github.com/shish/shimmie2-examples">Example Configs</a>
 			<li><a href="https://github.com/shish/shimmie2-utils">Utilities</a>
 		</ul>
 	</div>
