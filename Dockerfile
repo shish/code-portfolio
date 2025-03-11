@@ -1,5 +1,5 @@
-FROM debian:buster
-RUN apt update && apt install -y imagemagick git python3 python3-pygments xcftools
+FROM debian:trixie
+RUN apt update && apt install -y imagemagick git python3 python3-pygments
 COPY . /tmp/site
 RUN cd /tmp/site && sh ./build.sh
 

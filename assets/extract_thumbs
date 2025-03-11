@@ -19,7 +19,7 @@ def main(argv):
             output = os.path.join(base, name + "-" + size + "." + ext)
             sources = glob(os.path.join(base, name + ".*"))
             #print sources
-            sources = [x for x in sources if re.match(".*\.(jpg|png|gif|xcf)", x)]
+            sources = [x for x in sources if re.match(".*\.(jpg|png)", x)]
             if len(sources) == 0:
                 print("Can't find source for " + output)
                 continue
@@ -42,13 +42,6 @@ def main(argv):
                     cmd = "convert %(input)s -geometry %(width)dx%(height)d %(output)s"
                 else:
                     cmd = "convert %(input)s -geometry %(width)dx9000 -extent %(width)dx%(height)d %(output)s"
-            else:
-                if size == "full":
-                    cmd = "xcf2png %(input)s -o - | convert - %(output)s"
-                elif size == "screen":
-                    cmd = "xcf2png %(input)s -o - | convert - -geometry 800x800 %(output)s"
-                else:
-                    cmd = "xcf2png %(input)s -o - | convert - -geometry %(width)dx9000 -extent %(width)dx%(height)d %(output)s"
 
             args = {
                 "input": source,
