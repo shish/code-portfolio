@@ -43,12 +43,12 @@ BODY {
 			</div>
 			<div class="span4">
 				<h2>Context</h2>
-				<a class="thumbnail" href="/context"><img src="thumbs/context-360x150.jpg"></a>
+				<img src="thumbs/context-360x150.jpg">
 				<p>A profiling tool that shows how long each section of code takes, <em>and what context that code is running in</em>, something that every other profiler seems to ignore.</p>
 			</div>
 			<div class="span4">
 				<h2>Monkey Swarm</h2>
-				<a class="thumbnail" href="/monkeys"><img src="thumbs/monkeys-360x150.jpg"></a>
+				<img src="thumbs/monkeys-360x150.jpg">
 				<p>A tool to simulate having many users <em>interacting</em> with a website at once, not just hitting the front page.</p>
 			</div>
 		</div>
@@ -102,7 +102,23 @@ BODY {
 			<div class="span6">
 				<h2>Lemonade</h2>
 				<a class="thumbnail" href="https://github.com/shish/lemonade"><img src="thumbs/lemonade-560x150.png"></a>
-				<p>A rather fruity Ascii Demo Engine. For GCSE computing we were told to make a presentation about floating point binary - Seeing as I dislike Powerpoint, I decided to make a flipbook style animation in Notepad. Then, since 'press the PgDn key' is a sucky form of animation, I wrote an animation engine and compressed the whole lot to 1867 bytes. <a href="/videos/floating_point.html">See the results</a></p>
+				<p>A rather fruity Ascii Demo Engine. For GCSE computing we were told to make a
+				presentation about floating point binary - Seeing as I dislike Powerpoint, I
+				decided to make a flipbook style animation in Notepad. Then, since 'press the
+				PgDn key' is a sucky form of animation, I wrote an animation engine and compressed
+				the whole lot to 1867 bytes.
+				<a onclick="document.getElementById('floatingpointvid').showModal()">See the results</a>
+
+				<dialog id="floatingpointvid">
+				    <a onclick="document.getElementById('floatingpointvid').close()">Close</a>
+    				<br/>
+                    <video width="640" height="480" controls>
+    					<source src="videos/floating_point.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'>
+    					<source src="videos/floating_point.webm" type='video/webm; codecs="vp8.0, vorbis"'>
+    					<source src="videos/floating_point.ogg" type='video/ogg; codecs="theora, vorbis"'>
+    					<a href="videos/floating_point.mp4">Download</a>
+    				</video>
+				</dialog>
 			</div>
 		</div>
 		<div class="row">
@@ -113,19 +129,19 @@ BODY {
 			</div>
 			<div class="span4">
 				<h2>Mobile Launch Platform</h2>
-				<a class="thumbnail" href="/eve-mlp/"><img src="thumbs/eve-mlp-360x150.jpg"></a>
+				<a class="thumbnail" href="https://github.com/shish/eve-mlp"><img src="thumbs/eve-mlp-360x150.jpg"></a>
 				<p>A simple, functional, unofficial launcher for EVE Online, made after a wave of complaints that the official launcher was getting further and further from what players wanted.</p>
 			</div>
 			<div class="span4">
 				<h2>Whack-a-square</h2>
-				<a class="thumbnail" href="java4k/"><img src="thumbs/was-360x150.png"></a>
+				<img src="thumbs/was-360x150.png">
 				<p>My entry into the Java 4K game competition; trying to squeeze as much fun as possible into a 4096 byte .jar file. It was 2676 bytes with no attempts to shrink the code, just by being a simple game :P</p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="span6">
 				<h2>EFDG</h2>
-				<a class="thumbnail" href="deathcamp/"><img src="thumbs/deathcamp-560x150.jpg"></a>
+				<img src="thumbs/deathcamp-560x150.jpg">
 				<p>For GCSE Religious Studies lesson we were asked to make a game which would draw
 				attention to an important religious issue. Our game was "Escape From Deathcamp
 				Gugen&shy;schluben", which teaches players that nazi deathcamps are unpleasant.</p>
@@ -135,7 +151,19 @@ BODY {
 				<a class="thumbnail" href="https://hacks.rewiredstate.org/events/power-of-minds/car-muse"><img src="thumbs/carmuse-560x150.jpg"></a>
 				<p>The Boom Rangers' entry into Honda's "Power of Dreams" hack weekend. Takes events
 				from a synthesized engine management system (speed, gear change, etc) and generates
-				appropriate "music". Won the "Best Technology" award. <a href="/videos/car_muse.html">Video</a></p>
+				appropriate "music". Won the "Best Technology" award.
+				<a onclick="document.getElementById('carmusevid').showModal()">Video</a>
+
+				<dialog id="carmusevid">
+				    <a onclick="document.getElementById('carmusevid').close()">Close</a>
+    				<br/>
+                    <video width="640" height="480" controls>
+    					<source src="videos/car_muse.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'>
+    					<source src="videos/car_muse.webm" type='video/webm; codecs="vp8.0, vorbis"'>
+    					<source src="videos/car_muse.ogg" type='video/ogg; codecs="theora, vorbis"'>
+    					<a href="videos/car_muse.mp4">Download</a>
+    				</video>
+				</dialog>
 			</div>
 		</div>
 	</section>
@@ -189,7 +217,7 @@ BODY {
 		<div class="row">
 			<div class="span4">
 				<h2>Interest Link</h2>
-				<a class="thumbnail" href="https://link.shishnet.org/"><img src="thumbs/link-360x150.jpg"></a>
+				<a class="thumbnail" href="https://link.shish.io/"><img src="thumbs/link-360x150.jpg"></a>
 				<p>A system for sharing embarassing secrets in relative (not total) confidence.</p>
 			</div>
 			<div class="span4">
@@ -199,7 +227,7 @@ BODY {
 			</div>
 			<div class="span4">
 				<h2>Shimmie 2</h2>
-				<a class="thumbnail" href="shimmie2/"><img src="thumbs/shimmie2-360x150.jpg"></a>
+				<a class="thumbnail" href="https://shimmie.shishnet.org/"><img src="thumbs/shimmie2-360x150.jpg"></a>
 				<p>A Danbooru-style image board, designed to be significantly easier to install, run, and extend. Requires a standard LAMP stack as provided by any normal web host. This is probably my most popular project, with a team of 10 coders, hundreds of installations, and thousands of users online at once.</p>
 			</div>
 		</div>
@@ -228,7 +256,7 @@ BODY {
 			</div>
 			<div class="span4">
 				<h2>Rate Here, Rate Now</h2>
-				<a class="thumbnail" href="https://www.ratehereratenow.com"><img src="thumbs/rhrn-360x150.jpg"></a>
+				<a class="thumbnail" href="https://github.com/shish/rhrn"><img src="thumbs/rhrn-360x150.jpg"></a>
 				<p>Stick happy or sad faces on a map, so that I can figure out which street to live in.</p>
 			</div>
 			<div class="span4">

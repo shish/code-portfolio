@@ -10,6 +10,10 @@ SECTION {
 	padding-top: 60px;
 }
 
+DIALOG::backdrop {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
 .thumbnail {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
