@@ -62,19 +62,6 @@
 
 	<p>Here's a quick example of a couple of languages:
 
-	<style>
-	.tabberlive TD,
-	.tabber TD {
-		vertical-align: top;
-		padding: 16px;
-	}
-	UL.tabbernav {
-		padding-bottom: 1px;
-	}
-	UL.tabbernav A {
-		margin-bottom: 1px;
-	}
-	</style>
 	<div class="tabber">
 		<div class="tabbertab" title="Python (Decorators)">
 			<table>
@@ -347,6 +334,73 @@
 		</div>
 	</div>
 
-<script src="/assets/js/tabber-minimized.js"></script>
+	<style>
+	.tabber>UL {
+	    list-style: none;
+        margin: 0;
+        padding: 0;
+	}
+	.tabber>UL LI {
+	    display: inline-block;
+	    background: #eee;
+        border: 1px solid #ccc;
+        border-bottom: none;
+        padding: 8px 16px;
+        margin-right: -1px;
+        margin-bottom: -2px;
+        cursor: pointer;
+	}
+	.tabber>UL LI.current {
+        background: #fff;
+        border-bottom: 1px solid #fff;
+    }
+    .tabber>UL LI:hover {
+        background: #ddd;
+    }
+    .tabber .tabbertab {
+        border: 1px solid #ccc;
+        padding: 1em;
+    }
+    .tabbertab TD {
+        vertical-align: top;
+    }
+    .tabbertab {
+        display: none;
+    }
+    .tabbertab.current {
+        display: block;
+    }
+	</style>
 
+	<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".tabber").forEach(function(tabber) {
+    let ul = document.createElement("ul");
+    tabber.prepend(ul);
+
+    tabber.querySelectorAll(".tabbertab").forEach(function(tab, i) {
+      let li = document.createElement("li");
+      li.textContent = tab.getAttribute("title");
+      li.classList.add("tabbertab-title");
+      ul.appendChild(li);
+
+      li.addEventListener("click", function() {
+        tabber.querySelectorAll(".tabbertab").forEach(function(t) {
+          t.classList.remove("current");
+        });
+        tabber.querySelectorAll("li").forEach(function(l) {
+          l.classList.remove("current");
+        });
+        tab.classList.add("current");
+        li.classList.add("current");
+      });
+
+      if(i === 0) {
+        li.classList.add("current");
+        tab.classList.add("current");
+      }
+    });
+  });
+});
+	</script>
 <!--#include file="/assets/footer.html" -->
