@@ -8,7 +8,7 @@
 		<h1>Shimmie 2</h1>
 	</div>
 	<div class="row">
-		<div class="span4">
+		<div class="span12">
 
 <p>A danbooru-style image board, des&shy;igned to be easier to install, run, and extend.</p>
 <p>This is probably my most popular project, with 80 contributors, hundreds of installations, and thou&shy;sands of users online at once.</p>
@@ -37,44 +37,6 @@
 <p>&nbsp;
 
 			<p><a href="../">&laquo; Back to Shish's Code</a>
-		</div>
-        <div class="span8">
-
-<div class="carousel" id="myCarousel">
-	<div class="carousel-inner">
-		<div class="active item">
-			<img src="testbed-770x500.jpg">
-			<div class="carousel-caption">
-				<h4>The Shimmie Testbed</h4>
-				<p>Shish's personal gallery, where new features are tested</a>
-			</div>
-		</div>
-		<div class="item">
-			<img src="mishimmie-770x500.jpg">
-			<div class="carousel-caption">
-				<h4>The Mishimmie</h4>
-				<p>A gallery for Katawa Shoujo fanart, with a very nice theme and some code modifications</a>
-			</div>
-		</div>
-		<div class="item">
-			<img src="ponibooru-770x500.jpg">
-			<div class="carousel-caption">
-				<h4>Ponibooru (NSFW)</h4>
-				<p>An image dump for My Little Pony fans</a>
-			</div>
-		</div>
-		<div class="item">
-			<img src="rule34-770x500.jpg">
-			<div class="carousel-caption">
-				<h4>Rule34 (NSFW)</h4>
-				<p>The biggest known Shimmie installation, averaging 3000 users online at any time</p>
-			</div>
-		</div>
-	</div>
-	<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-	<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-</div>
-
 		</div>
 	</div>
 
