@@ -16,7 +16,7 @@
 <p>&nbsp;
 
 <div class="row">
-	<div class="span2">
+	<div class="span3">
 		Links
 		<ul>
 			<li><a href="http://shimmie.shishnet.org/">Demo Site</a>
@@ -24,7 +24,7 @@
 			<li><a href="https://github.com/shish/shimmie2/issues">Bug Tracker</a>
 		</ul>
 	</div>
-	<div class="span2">
+	<div class="span3">
 		Downloads
 		<ul>
 			<li><a href="https://github.com/shish/shimmie2">Source Code</a>
