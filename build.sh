@@ -6,3 +6,5 @@ for n in `ls -1 context/*xample* context/*himmie*.php | grep -v html` ; do
 	echo pygmentize -o $n.html $n
 	/usr/bin/pygmentize -o $n.html $n
 done
+
+echo "ok" > health
