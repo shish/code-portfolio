@@ -1,13 +1,3 @@
-*-full.*
-*-screen.*
 *-[0-9][0-9][0-9]x[0-9][0-9][0-9].*
 *-770x.png
-*.exe
-*.dmg
-*.tgz
-*.zip
-*.tar.gz
-*.py.html
-*.php.html
-*.java.html
 health

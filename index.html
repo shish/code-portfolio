@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Shish's Code Bits</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link href="/assets/css/shishnet.css" rel="stylesheet">
+
+		<link rel="shortcut icon" href="/assets/img/favicon.ico">
+	</head>
+
+	<body>
+
+	<header>
+		<h1>Hello, world!</h1>
+		<p>Most of what I do is programming - personal and professional; apps and libraries; open and closed; web and native. Here's a selection of some things you might be interested in.</p>
+	</header>
+
+	<section id="misc">
+		<h2>Misc Bits <small>Most of the interesting things don't fit into a category</small></h2>
+		<div class="span4">
+			<h3>Firehose</h3>
+			<a href="https://github.com/shish/firehose"><img src="thumbs/firehose.webp"></a>
+			<p>A GPG based chat system with traffic analysis resistance.</p>
+		</div>
+		<div class="span4">
+			<h3>Context</h3>
+			<a href="https://github.com/shish/context"><img src="thumbs/context.webp"></a>
+			<p>I was doing tracing and icicle graphs before they were cool</p>
+		</div>
+		<div class="span4">
+			<h3>Monkey Swarm</h3>
+			<img src="thumbs/monkeys.webp">
+			<p>A tool to simulate having many users <em>interacting</em> with a website at once, not just hitting the front page.</p>
+		</div>
+		<div class="span4">
+			<h3>CSB</h3>
+			<a href="https://github.com/shish/csb"><img src="thumbs/csb.webp"></a>
+			<p>A Curses-based SQL Browser, allowing users to edit database tables like a spreadsheet.</p>
+		</div>
+		<div class="span4">
+			<h3>Zelda</h3>
+			<a href="https://github.com/shish/zelda"><img src="thumbs/zelda.webp"></a>
+			<p>A tool to convert apache logs to a binary format; conversion is much faster than compression, and results are 15% the size of plain text.</p>
+		</div>
+		<div class="span4">
+			<h3>PyGE</h3>
+			<a href="https://github.com/shish/pyge"><img src="thumbs/pyge.webp"></a>
+			<p>A tool to extract stuff from various game archives; over 20 games supported so far, and adding more formats is easy.</p>
+		</div>
+		<div class="span4">
+			<h3>IconMapper</h3>
+			<a href="https://github.com/civicboom/iconmapper"><img src="thumbs/iconmapper.webp"></a>
+			<p>Turn a folder full of images into a single .png sprite sheet with .css file to pick out the individual parts. An open-source Civicboom side-project.</p>
+		</div>
+		<div class="span4">
+			<h3>Apache2RRD</h3>
+			<a href="https://github.com/shish/apache2rrd"><img src="thumbs/a2r.webp"></a>
+			<p>Turns apache (or compatible) log files into RRD files, and from there into graphs of browser use, hits and traffic.</p>
+		</div>
+		<div class="span4">
+			<h3>WP Deus Ex</h3>
+			<a href="https://github.com/shish/wp_deusex"><img src="thumbs/wp-deusex.webp"></a>
+			<p>A Deus Ex theme for wordpress, as used on <a href="https://blog.shishnet.org">my blog</a>. Most images and graphics &copy; Ion Storm 2000, please don't sue me.</p>
+		</div>
+	</section>
+
+
+	<section id="games">
+		<h2>Games & Entertainment <small>Silly things, mostly~</small></h2>
+		<div class="span6">
+			<h3>Kuri2D</h3>
+			<a href="https://github.com/shish/kuri2d"><img src="thumbs/kuri2d.webp"></a>
+			<p>A very simple <a href="https://en.wikipedia.org/wiki/Intelligent_Qube">Kurushi</a> clone in SDL, made to teach myself the C SDL bindings, as well as the now obsolete Autopackage format.</p>
+		</div>
+		<div class="span6">
+			<h3>Lemonade</h3>
+			<a href="https://github.com/shish/lemonade"><img src="thumbs/lemonade.webp"></a>
+			<p>A rather fruity Ascii Demo Engine. For GCSE computing we were told to make a
+			presentation about floating point binary - Seeing as I dislike Powerpoint, I
+			decided to make a flipbook style animation in Notepad. Then, since 'press the
+			PgDn key' is a sucky form of animation, I wrote an animation engine and compressed
+			the whole lot to 1867 bytes.
+			<a onclick="document.getElementById('floatingpointvid').showModal()">See the results</a>
+
+			<dialog id="floatingpointvid">
+			    <a onclick="document.getElementById('floatingpointvid').close()">Close</a>
+				<br/>
+                <video width="640" height="480" controls>
+   					<source src="videos/floating_point.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'>
+   					<source src="videos/floating_point.webm" type='video/webm; codecs="vp8.0, vorbis"'>
+   					<source src="videos/floating_point.ogg" type='video/ogg; codecs="theora, vorbis"'>
+   					<a href="videos/floating_point.mp4">Download</a>
+				</video>
+			</dialog>
+		</div>
+		<div class="span4">
+			<h3>The Molyneux Experience</h3>
+			<a href="https://shish.github.io/molyex/"><img src="thumbs/molyex.webp"></a>
+			<p>What would it be like, to be Him for a day? A Molyjam 2013 entry.</p>
+		</div>
+		<div class="span4">
+			<h3>Mobile Launch Platform</h3>
+			<a href="https://github.com/shish/eve-mlp"><img src="thumbs/eve-mlp.webp"></a>
+			<p>A simple, functional, unofficial launcher for EVE Online, made after a wave of complaints that the official launcher was getting further and further from what players wanted.</p>
+		</div>
+		<div class="span4">
+			<h3>Whack-a-square</h3>
+			<img src="thumbs/was.webp">
+			<p>My entry into the Java 4K game competition; trying to squeeze as much fun as possible into a 4096 byte .jar file. It was 2676 bytes with no attempts to shrink the code, just by being a simple game :P</p>
+		</div>
+		<div class="span6">
+			<h3>EFDG</h3>
+			<img src="thumbs/deathcamp.webp">
+			<p>For GCSE Religious Studies lesson we were asked to make a game which would draw
+			attention to an important religious issue. Our game was "Escape From Deathcamp
+			Gugen&shy;schluben", which teaches players that nazi deathcamps are unpleasant.</p>
+		</div>
+		<div class="span6">
+			<h3>CarMuse</h3>
+			<a href="https://hacks.rewiredstate.org/events/power-of-minds/car-muse"><img src="thumbs/carmuse.webp"></a>
+			<p>The Boom Rangers' entry into Honda's "Power of Dreams" hack weekend. Takes events
+			from a synthesized engine management system (speed, gear change, etc) and generates
+			appropriate "music". Won the "Best Technology" award.
+			<a onclick="document.getElementById('carmusevid').showModal()">Video</a>
+
+			<dialog id="carmusevid">
+			    <a onclick="document.getElementById('carmusevid').close()">Close</a>
+				<br/>
+                <video width="640" height="480" controls>
+   					<source src="videos/car_muse.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'>
+   					<source src="videos/car_muse.webm" type='video/webm; codecs="vp8.0, vorbis"'>
+   					<source src="videos/car_muse.ogg" type='video/ogg; codecs="theora, vorbis"'>
+   					<a href="videos/car_muse.mp4">Download</a>
+				</video>
+			</dialog>
+		</div>
+	</section>
+
+	<section id="libraries">
+		<h2>Libraries <small>For sharing features :3</small></h2>
+		<div class="span4">
+			<h3>MicroHTML</h3>
+			<a href="https://github.com/shish/microhtml"><img src="thumbs/microhtml.webp"></a>
+			<p>After working with HHVM for a while, one of the things I miss most is XHP...</p>
+		</div>
+		<div class="span4">
+			<h3>MicroCRUD</h3>
+			<a href="https://github.com/shish/microcrud"><img src="thumbs/microcrud.webp"></a>
+			<p>A library for making CRUD interfaces quickly and simply.</p>
+		</div>
+		<div class="span4">
+			<h3>EventTracer (PHP)</h3>
+			<a href="https://github.com/shish/eventtracer-php"><img src="thumbs/eventtracerphp.webp"></a>
+			<p>For profiling PHP code using the Chrome Trace Viewer</p>
+		</div>
+		<div class="span4">
+			<h3>Python-Flexihash</h3>
+			<a href="https://github.com/shish/python-flexihash"><img src="thumbs/flexihash.webp"></a>
+			<p>A consistent hashing library, python implementation almost 1:1 compatible with the PHP original.</p>
+		</div>
+		<div class="span4">
+			<h3>SQLiteShelf</h3>
+			<a href="https://github.com/shish/sqliteshelf"><img src="thumbs/sqlsh.webp"></a>
+			<p>Allows an SQLite database to be used as a python dictionary with persistant storage.</p>
+		</div>
+		<div class="span4">
+			<h3>Spawn-FCGI.php <small>Beta</small></h3>
+			<a href="https://github.com/shish/spawn-fcgi.php"><img src="thumbs/sfcgip.webp"></a>
+			<p>Run any FastCGI app on a PHP-only web host.</p>
+		</div>
+	</section>
+
+
+	<section id="web-apps">
+		<h2>Web Apps <small>Web 2.0 tech with web 0.2 design skills</small></h2>
+		<div class="span4">
+			<h3>Interest Link</h3>
+			<a href="https://link.shish.io/"><img src="thumbs/link.webp"></a>
+			<p>A system for sharing embarassing secrets in relative (not total) confidence.</p>
+		</div>
+		<div class="span4">
+			<h3>DiveTools</h3>
+			<a href="https://scuba.shish.io/"><img src="thumbs/scuba.webp"></a>
+			<p>A collection of scuba-diving related calculators.</p>
+		</div>
+		<div class="span4">
+			<h3>Shimmie 2</h3>
+			<a href="https://shimmie.shishnet.org/"><img src="thumbs/shimmie2.webp"></a>
+			<p>A Danbooru-style image board, designed to be significantly easier to install, run, and extend. Requires a standard LAMP stack as provided by any normal web host. This is probably my most popular project, with a team of 10 coders, hundreds of installations, and thousands of users online at once.</p>
+		</div>
+		<div class="span4">
+			<h3>Rav</h3>
+			<a href="https://rav.shishnet.org"><img src="thumbs/rav.webp"></a>
+			<p>An avatar hosting service that offers up a random avatar from the user's selection each time. Also allows users to turn their avatar collections into Facebook profile page banners.</p>
+		</div>
+		<div class="span4">
+			<h3>Travmap</h3>
+			<a href="https://travmap.shishnet.org/"><img src="thumbs/travmap.webp"></a>
+			<p>A tool to make maps of various Travian worlds. Mostly untouched since I stopped playing Travian, it's been happily keeping itself up-to-date for seven years.</p>
+		</div>
+		<div class="span4">
+			<h3>CView 3</h3>
+			<a href="https://github.com/shish/cview3"><img src="thumbs/cview3.webp"></a>
+			<p>A pure-AJAX comic viewer -- rather than writing any server-side code, I got javascript to parse Apache's built-in directory indexing output. Should work with any web server that can generate directory indexes, and be almost perfectly fast due to the use of static cacheable files.</p>
+		</div>
+		<div class="span4">
+			<h3>Turnabout Tracker</h3>
+			<a href="https://github.com/shish/turnabout"><img src="thumbs/turnabout.webp"></a>
+			<p>An attempt to make some project management software that isn't completely shit.</p>
+		</div>
+		<div class="span4">
+			<h3>Rate Here, Rate Now</h3>
+			<a href="https://github.com/shish/rhrn"><img src="thumbs/rhrn.webp"></a>
+			<p>Stick happy or sad faces on a map, so that I can figure out which street to live in.</p>
+		</div>
+		<div class="span4">
+			<h3>Siggy</h3>
+			<a href="https://github.com/shish/siggy"><img src="thumbs/siggy.webp"></a>
+			<p>Quotes database with an image output suitable for linking to from a forum signature.</p>
+		</div>
+	</section>
+
+
+	<section id="web-sites">
+		<h2>Web Sites <small>Web 1.0 tech with web 1.0 design skills</small></h2>
+		<div class="span6">
+			<h3>TPA Heatmaps</h3>
+			<img src="thumbs/tpah.webp">
+			<p>A lot of spreadsheet data, made presentable. From National Hack The Government Day 2013.</p>
+		</div>
+		<div class="span6">
+			<h3>Pictotrade</h3>
+			<img src="thumbs/pictotrade.webp">
+			<p>An interactive diagram for exploring international trade factors. From Department for International Development Data Challenge 2012.</p>
+		</div>
+		<div class="span4">
+			<h3>KentANIMEted</h3>
+			<a href="https://www.animesoc.org.uk/"><img src="thumbs/kat.webp"></a>
+			<p>For my university's anime society (The design was already there, I just tidied up the back end, automated it, added iCal support, made it scale nicely from HD monitors to sub-mobile devices, ...).</p>
+		</div>
+		<div class="span4">
+			<h3>ContextShift</h3>
+			<img src="thumbs/cshift.webp">
+			<p>A web / VPS hosting company; a VPS control panel was done in a similar style, but that's only visible to customers.</p>
+		</div>
+		<div class="span4">
+			<h3>TRM</h3>
+			<img src="thumbs/trm.webp">
+			<p>A website for a travel insurance company, I think this was my first paid programming work ever~</p>
+		</div>
+		<div class="span3">
+			<h3>BoomTools</h3>
+			<img src="thumbs/boomtools.webp">
+			<p>A place to sell Civicboom's side projects</p>
+		</div>
+		<div class="span3">
+			<h3>Animesoc</h3>
+			<img src="thumbs/animesoc-old.webp">
+			<p>The previous design of the Animesoc website; again my work was behind the scenes.
+		</div>
+		<div class="span3">
+			<h3>ShishNet</h3>
+			<a href="https://www.shishnet.org/"><img src="thumbs/shishnet.webp"></a>
+			<p>The front page of my site; I had the idea before I saw JWZ's site XP
+		</div>
+		<div class="span3">
+			<h3>Portfolio</h3>
+			<a href="https://code.shishnet.org/"><img src="thumbs/code-site.webp"></a>
+			<p>I also made this page~</p>
+		</div>
+	</section>
+
+
+	<section id="other">
+		<h2>Other <small>The bits you probably don't care about</small></h2>
+		<div class="span4">
+			<h3>Patch Archive</h3>
+			<p>Some contributions to oldschool mailing-list-based open source projects</p>
+			<p><a class="btn pull-right" href="https://github.com/shish/patch-archive">View details &raquo;</a></p>
+		</div>
+		<!--
+		<div class="span4">
+			<h3>Really Old Things</h3>
+			<p>Many random bits of code which are old / broken / proof-of-concept only / generally useless and uninteresting</p>
+			<p><a class="btn pull-right" href="#">View details &raquo;</a></p>
+		</div>
+		-->
+		<div class="span4">
+			<h3>My Github account</h3>
+			<p>Stalk my progress o.o</p>
+			<p><a class="btn pull-right" href="https://github.com/shish">View details &raquo;</a></p>
+		</div>
+	</section>
+
+</body>
+</html>
